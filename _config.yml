@@ -8,14 +8,14 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
+site_theme               : "default"
 title                    : "Junteng Liu"
 title_separator          : "-"
 name                     : &name "Junteng Liu"
-description              : &description "Junteng Liu's academic homepage"
+description              : &description "Junteng Liu's academic homepage: PhD candidate at HKUST NLP Group working on NLP, machine learning, LLM reasoning, reinforcement learning, VLM hallucination, LLM truthfulness, and interpretability."
 url                      : https://stacommonicke.github.io
-baseurl                  : ""
-repository               : "stacommonicke/academicpages.github.io"
+baseurl                  : "/LJT-Homepage"
+repository               : "stacommonicke/LJT-Homepage"
 
 # Site Author
 author:
@@ -23,7 +23,7 @@ author:
   avatar           : "profile.png"
   name             : "Junteng Liu"
   pronouns         :
-  bio              : "First-year PhD candidate at HKUST NLP Group, working on natural language processing, machine learning, LLM reasoning, reinforcement learning, hallucination in vision-language models, LLM truthfulness, and interpretability."
+  bio              : "First-year PhD candidate at HKUST NLP Group. My research focuses on natural language processing and machine learning, especially LLM reasoning and reinforcement learning, hallucination in vision-language models, LLM truthfulness, and interpretability."
   location         : "Hong Kong"
   employer         : "Hong Kong University of Science and Technology"
   uri              :
@@ -78,12 +78,12 @@ author:
   youtube          :
   zhihu            :
 
-# Publication Category - The following the list of publication categories and their headings
+# Publication Category
 publication_category:
   books:
     title: 'Books'
   manuscripts:
-    title: 'Journal Articles'    
+    title: 'Preprints / Arxiv'
   conferences:
     title: 'Conference Papers'
 
@@ -206,7 +206,7 @@ kramdown:
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
 
-# These settings control the types of collections used by the template
+# Collections
 collections:
   teaching:
     output: true
@@ -221,9 +221,8 @@ collections:
     output: true
     permalink: /:collection/:path/
 
-# These settings control how pages and collections are included in the site
+# Defaults
 defaults:
-  # _posts
   - scope:
       path: ""
       type: posts
@@ -234,14 +233,12 @@ defaults:
       comments: true
       share: true
       related: true
-  # _pages
   - scope:
       path: ""
       type: pages
     values:
       layout: single
       author_profile: true
-  # _teaching
   - scope:
       path: ""
       type: teaching
@@ -250,7 +247,6 @@ defaults:
       author_profile: true
       share: true
       comments: true
-  # _publications
   - scope:
       path: ""
       type: publications
@@ -259,7 +255,6 @@ defaults:
       author_profile: true
       share: true
       comments: true
-  # _portfolio
   - scope:
       path: ""
       type: portfolio
@@ -268,7 +263,6 @@ defaults:
       author_profile: true
       share: true
       comment: true
-  # _talks
   - scope:
       path: ""
       type: talks
@@ -284,7 +278,7 @@ sass:
 
 # Outputting
 permalink: /:categories/:year/:month/:day/:title/
-timezone:
+timezone: Asia/Hong_Kong
 
 # Plugins
 plugins:
@@ -293,48 +287,15 @@ plugins:
   - jekyll-paginate
   - jekyll-seo-tag
 
-# mimic GitHub Pages with --safe, by listing plugins, yeoman generators, Ruby gems, etc
 safe: false
 paginate: 5
 paginate_path: /page:num/
 
-# Archives
-#  Type:
-#  - GitHub-compatible permalink format: "year", "month", "day",
-#    "monthly", "yearly"
-#  - Jekyll-archive compatible: "posts", "posts-by-category", "posts-by-tag",
-#    "posts-by-year", "posts-by-month", "posts-by-day", "categories",
-#    "tags"
 category_archive:
   type: posts
 tag_archive:
   type: posts
 
-# Default YAML values (see https://jekyllrb.com/docs/frontmatter/defaults/)
-defaults:
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: single
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      comments: true # add comments to all posts by default
-
-# BuySell domain name settings
-# Uncomment and purchase a domain name from https://www.buysell.com/ if you want to use a custom domain name for GitHub Pages
-# If you use a custom domain name, change the url in the "Basic Site Settings" section to match the domain name you purchased
-# buysell_domain_name: yourdomainname.com
-
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by adding a `keep_files:` entry to the configuration.
 exclude:
   - .sass-cache/
   - .jekyll-cache/
@@ -346,7 +307,3 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
-
-# Set this to the time zone you want to use for your site.
-# See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available time zones
-# timezone: "Asia/Hong_Kong"
